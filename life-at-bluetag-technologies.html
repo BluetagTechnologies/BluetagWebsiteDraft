@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Culture | BlueTag Technologies</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Experience the unique culture and work environment at BlueTag Technologies - where innovation meets collaboration.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .dark-mode .page-loading {
+            background-color: #0b0f19;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        .dark-mode .page-spinner {
+            border-color: rgba(255, 255, 255, .4);
+            border-right-color: transparent;
+        }
+
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== null && mode === 'dark') {
+            root.classList.add('dark-mode');
+        } else {
+            root.classList.remove('dark-mode');
+        }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+</head>
+
+
+<!-- Body -->
+
+<body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+        <!-- Navbar -->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+        <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+            <div class="container px-3">
+                <a href="home.html" class="navbar-brand pe-3">
+                    <img src="assets/img/BlueTag-Tech-logo-light-bg.svg" width="140" alt="BlueTag Tech logo">
+                </a>
+                <div id="navbarNav" class="offcanvas offcanvas-end">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="home.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">The
+                                    Company</a>
+                                <div class="dropdown-menu dropdown-menu-lg p-0">
+                                    <div class="d-flex flex-column flex-lg-row">
+                                        <!-- Main About Section -->
+                                        <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3">
+                                            <div class="card border-0 shadow-sm h-100">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">About BlueTag</h5>
+                                                    <p class="card-text fs-sm mb-3">We're a leading software solutions
+                                                        provider transforming
+                                                        organizations through innovative technology since 2014.</p>
+                                                    <a href="about-v3.html" class="btn btn-primary btn-sm">Learn
+                                                        More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Company Links -->
+                                        <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3">
+                                            <div class="row g-3">
+                                                <!-- Leadership -->
+                                                <div class="col-12">
+                                                    <a href="leadership.html"
+                                                        class="card card-hover border-0 shadow-sm text-decoration-none p-3">
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bx bx-group fs-3 text-primary me-2"></i>
+                                                            <div>
+                                                                <h6 class="mb-0">Leadership Team</h6>
+                                                                <p class="fs-xs text-muted mb-0">Meet the team that's
+                                                                    leading BlueTag.</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <!-- Careers -->
+                                                <div class="col-12">
+                                                    <a href="careers.html"
+                                                        class="card card-hover border-0 shadow-sm text-decoration-none p-3">
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bx bx-briefcase fs-3 text-primary me-2"></i>
+                                                            <div>
+                                                                <h6 class="mb-0">Careers</h6>
+                                                                <p class="fs-xs text-muted mb-0">Join our growing team
+                                                                    of innovators.</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <!-- Our Culture -->
+                                                <div class="col-12">
+                                                    <a href="life-at-bluetag-technologies.html"
+                                                        class="card card-hover border-0 shadow-sm text-decoration-none p-3">
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bx bx-building-house fs-3 text-primary me-2"></i>
+                                                            <div>
+                                                                <h6 class="mb-0">Our Culture</h6>
+                                                                <p class="fs-xs text-muted mb-0">Experience life at
+                                                                    BlueTag Technologies.</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <!-- Clients/Partners -->
+                                                <div class="col-12">
+                                                    <a href="clients-and-partners.html"
+                                                        class="card card-hover border-0 shadow-sm text-decoration-none p-3">
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bx bx-buildings fs-3 text-primary me-2"></i>
+                                                            <div>
+                                                                <h6 class="mb-0">Clients & Partners</h6>
+                                                                <p class="fs-xs text-muted mb-0">Organizations we work
+                                                                    with and serve.</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Featured Content -->
+                                        <div class="mega-dropdown-column d-none d-lg-block px-lg-4 py-lg-3 py-3">
+                                            <div class="card border-0 shadow-sm overflow-hidden">
+                                                <img src="https://placehold.co/600x400?text=Our+Story"
+                                                    class="card-img-top" alt="BlueTag Story">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Our Journey</h6>
+                                                    <p class="card-text fs-sm">From startup to industry leader: The
+                                                        BlueTag story of innovation
+                                                        and growth.</p>
+                                                    <a href="about-v3.html#story" class="btn btn-link btn-sm px-0">
+                                                        Read Our Story <i class="bx bx-right-arrow-alt ms-1"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Solutions &amp;
+                                    Products</a>
+                                <div class="dropdown-menu dropdown-menu-lg p-0">
+                                    <div class="d-flex flex-column flex-lg-row">
+                                        <!-- Enterprise Solutions -->
+                                        <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3">
+                                            <h5 class="text-primary mb-3">Enterprise Solutions</h5>
+                                            <div class="overflow-auto"
+                                                style="max-height: 300px; scrollbar-width: thin;">
+                                                <div class="row g-3">
+                                                    <!-- ProGrid ERP -->
+                                                    <div class="col-12">
+                                                        <a href="progrid-erp.html"
+                                                            class="d-flex align-items-center text-decoration-none">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/img/solutions/progrid-icon.svg"
+                                                                    width="32" alt="ProGrid ERP" class="me-2"
+                                                                    onerror="this.src='https://placehold.co/32x32?text=ERP'">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h6 class="mb-0">ProGrid ERP</h6>
+                                                                <p class="fs-xs text-muted mb-0">Enterprise resource
+                                                                    planning</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <!-- BESTS -->
+                                                    <div class="col-12">
+                                                        <a href="bests.html"
+                                                            class="d-flex align-items-center text-decoration-none">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/img/solutions/bests-icon.svg"
+                                                                    width="32" alt="BESTS" class="me-2"
+                                                                    onerror="this.src='https://placehold.co/32x32?text=BESTS'">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h6 class="mb-0">BESTS&trade;</h6>
+                                                                <p class="fs-xs text-muted mb-0">Bespoke Enterprise
+                                                                    Solutions & Training Services</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <!-- Membership Portal -->
+                                                    <div class="col-12">
+                                                        <a href="epms.html"
+                                                            class="d-flex align-items-center text-decoration-none">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/img/solutions/epms-icon.svg" width="32"
+                                                                    alt="EPMS" class="me-2"
+                                                                    onerror="this.src='https://placehold.co/32x32?text=EPMS'">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h6 class="mb-0">Membership Portal</h6>
+                                                                <p class="fs-xs text-muted mb-0">Membership management
+                                                                    system</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Education Solutions -->
+                                        <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3 border-start-lg">
+                                            <h5 class="text-primary mb-3">Education Solutions</h5>
+                                            <div class="overflow-auto"
+                                                style="max-height: 300px; scrollbar-width: thin;">
+                                                <div class="row g-3">
+                                                    <!-- SchoolPort -->
+                                                    <div class="col-12">
+                                                        <a href="schoolport.html"
+                                                            class="d-flex align-items-center text-decoration-none">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="assets/img/solutions/schoolport-icon.svg"
+                                                                    width="32" alt="SchoolPort" class="me-2"
+                                                                    onerror="this.src='https://placehold.co/32x32?text=SP'">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2">
+                                                                <h6 class="mb-0">SchoolPort&trade;</h6>
+                                                                <p class="fs-xs text-muted mb-0">K-12 school management
+                                                                    system</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <!-- Other education solutions -->
+                                                    <!-- ... existing code ... -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Specialized Systems -->
+                                        <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3 border-start-lg">
+                                            <h5 class="text-primary mb-3">Specialized Systems</h5>
+                                            <!-- ... existing code ... -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Other navigation items -->
+                            <!-- ... existing code ... -->
+                        </ul>
+                    </div>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero section -->
+        <section class="position-relative pt-5">
+            <!-- Gradient overlay -->
+            <div class="position-absolute top-0 start-0 w-100 bg-gradient-primary-translucent" style="height: 100%;">
+            </div>
+
+            <!-- Background image -->
+            <div class="jarallax" data-jarallax data-speed="0.4">
+                <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></span>
+                <div class="jarallax-img"
+                    style="background-image: url('https://placehold.co/1920x600?text=BlueTag+Team+Collaboration');">
+                </div>
+                <div class="position-relative text-center zindex-5 py-md-5">
+                    <div class="container py-5">
+                        <h1 class="display-2 text-light mb-4">Life at BlueTag Technologies</h1>
+                        <p class="fs-xl text-light opacity-70 mb-5">Where innovation meets collaboration and growth</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values section -->
+        <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+            <div class="row justify-content-center text-center pb-3 mb-sm-2 mb-lg-3">
+                <div class="col-xl-6 col-lg-7 col-md-9">
+                    <h2 class="h1 mb-4">Our Core Values</h2>
+                    <p class="fs-lg text-muted mb-0">The principles that guide everything we do at BlueTag Technologies
+                    </p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3">
+                <!-- Value 1: Innovation -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="d-table bg-primary rounded-3 p-3 mx-auto mt-3 mb-4">
+                                <i class="bx bx-bulb d-block fs-2 text-light"></i>
+                            </div>
+                            <h3 class="h5 mb-3">Innovation</h3>
+                            <p class="fs-sm mb-0">We constantly push boundaries to create cutting-edge solutions that
+                                transform businesses and improve lives.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 2: Excellence -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="d-table bg-primary rounded-3 p-3 mx-auto mt-3 mb-4">
+                                <i class="bx bx-medal d-block fs-2 text-light"></i>
+                            </div>
+                            <h3 class="h5 mb-3">Excellence</h3>
+                            <p class="fs-sm mb-0">We are committed to delivering the highest quality in everything we
+                                do, exceeding expectations at every turn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 3: Integrity -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="d-table bg-primary rounded-3 p-3 mx-auto mt-3 mb-4">
+                                <i class="bx bx-shield d-block fs-2 text-light"></i>
+                            </div>
+                            <h3 class="h5 mb-3">Integrity</h3>
+                            <p class="fs-sm mb-0">We operate with honesty, transparency, and ethical standards in all
+                                our business relationships.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 4: Collaboration -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="d-table bg-primary rounded-3 p-3 mx-auto mt-3 mb-4">
+                                <i class="bx bx-network-chart d-block fs-2 text-light"></i>
+                            </div>
+                            <h3 class="h5 mb-3">Collaboration</h3>
+                            <p class="fs-sm mb-0">We believe in the power of teamwork, bringing diverse perspectives
+                                together to create exceptional results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Environment section with image -->
+        <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                    <div class="bg-size-cover bg-position-center bg-repeat-0 rounded-3"
+                        style="background-image: url('https://placehold.co/800x600?text=Modern+Office+Space'); height: 500px;">
+                    </div>
+                </div>
+                <div class="col-md-6 ps-xl-5">
+                    <h2 class="h1 mb-4">Our Work Environment</h2>
+                    <p class="fs-lg pb-3 mb-3">At BlueTag Technologies, we've created a workspace that inspires
+                        creativity, fosters collaboration, and promotes well-being. Our modern office spaces are
+                        designed to support different work styles and encourage innovation.</p>
+                    <div class="row row-cols-1 row-cols-sm-2 g-4 pb-2 pb-md-4">
+                        <div class="col">
+                            <div class="d-flex">
+                                <i class="bx bx-check-circle fs-4 text-primary me-2"></i>
+                                <span>Flexible work arrangements</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex">
+                                <i class="bx bx-check-circle fs-4 text-primary me-2"></i>
+                                <span>Collaborative spaces</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex">
+                                <i class="bx bx-check-circle fs-4 text-primary me-2"></i>
+                                <span>State-of-the-art technology</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex">
+                                <i class="bx bx-check-circle fs-4 text-primary me-2"></i>
+                                <span>Wellness-focused amenities</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="careers.html" class="btn btn-primary">Join Our Team</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Culture section -->
+        <section class="bg-secondary py-5">
+            <div class="container py-md-2 py-lg-4 py-xl-5">
+                <div class="row justify-content-center text-center pb-4 mb-2 mb-lg-3">
+                    <div class="col-xl-6 col-lg-7 col-md-9">
+                        <h2 class="h1 mb-4">Our Team Culture</h2>
+                        <p class="fs-lg mb-0">What makes working at BlueTag Technologies special</p>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <!-- Culture aspect 1 -->
+                    <div class="col">
+                        <div class="card border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bx bx-rocket fs-2 text-primary me-3"></i>
+                                    <h3 class="h5 mb-0">Innovation-Driven</h3>
+                                </div>
+                                <p class="mb-0">We encourage creative thinking and provide the freedom to explore new
+                                    ideas. Our team members are empowered to challenge the status quo and develop
+                                    innovative solutions that address real-world problems.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Culture aspect 2 -->
+                    <div class="col">
+                        <div class="card border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bx bx-trending-up fs-2 text-primary me-3"></i>
+                                    <h3 class="h5 mb-0">Growth-Focused</h3>
+                                </div>
+                                <p class="mb-0">We invest in our people's professional development through continuous
+                                    learning opportunities, mentorship programs, and career advancement pathways. Your
+                                    growth is our priority.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Culture aspect 3 -->
+                    <div class="col">
+                        <div class="card border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bx bx-group fs-2 text-primary me-3"></i>
+                                    <h3 class="h5 mb-0">Collaborative Spirit</h3>
+                                </div>
+                                <p class="mb-0">We believe that the best solutions come from diverse perspectives
+                                    working together. Our team culture promotes open communication, knowledge sharing,
+                                    and cross-functional collaboration.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Culture aspect 4 -->
+                    <div class="col">
+                        <div class="card border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bx bx-balance fs-2 text-primary me-3"></i>
+                                    <h3 class="h5 mb-0">Work-Life Balance</h3>
+                                </div>
+                                <p class="mb-0">We understand the importance of balance. Our flexible work policies,
+                                    wellness initiatives, and supportive environment help our team members thrive both
+                                    professionally and personally.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits section -->
+        <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+            <div class="row justify-content-center text-center pb-3 mb-sm-2 mb-lg-3">
+                <div class="col-xl-6 col-lg-7 col-md-9">
+                    <h2 class="h1 mb-4">Benefits of Working at BlueTag</h2>
+                    <p class="fs-lg text-muted mb-0">We take care of our team so they can focus on creating exceptional
+                        solutions</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3">
+                <!-- Benefit 1 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bx bx-health fs-2 text-primary me-3"></i>
+                                <h3 class="h5 mb-0">Health & Wellness</h3>
+                            </div>
+                            <p class="fs-sm mb-0">Comprehensive health insurance, wellness programs, and mental health
+                                support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bx bx-book-open fs-2 text-primary me-3"></i>
+                                <h3 class="h5 mb-0">Learning & Development</h3>
+                            </div>
+                            <p class="fs-sm mb-0">Training budgets, certification support, and continuous learning
+                                opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bx bx-time-five fs-2 text-primary me-3"></i>
+                                <h3 class="h5 mb-0">Flexible Work</h3>
+                            </div>
+                            <p class="fs-sm mb-0">Flexible hours, remote work options, and generous paid time off.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bx bx-calendar-event fs-2 text-primary me-3"></i>
+                                <h3 class="h5 mb-0">Team Building</h3>
+                            </div>
+                            <p class="fs-sm mb-0">Regular team events, celebrations, and opportunities to connect.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employee Testimonials -->
+        <section class="bg-secondary py-5">
+            <div class="container py-md-2 py-lg-4 py-xl-5">
+                <div class="row justify-content-center text-center pb-4 mb-2 mb-lg-3">
+                    <div class="col-xl-6 col-lg-7 col-md-9">
+                        <h2 class="h1 mb-4">What Our Team Says</h2>
+                        <p class="fs-lg text-muted mb-0">Hear directly from our team members about their experiences
+                            working at BlueTag Technologies</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial Carousel -->
+                <div class="swiper" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 24,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "576": {
+              "slidesPerView": 1
+            },
+            "992": {
+              "slidesPerView": 2
+            },
+            "1200": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+                    <div class="swiper-wrapper">
+
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body p-4 p-md-5">
+                                    <div class="d-flex align-items-center pb-3 mb-3">
+                                        <img src="https://placehold.co/100x100?text=A" class="rounded-circle" width="60"
+                                            alt="Aisha Johnson">
+                                        <div class="ps-3">
+                                            <h4 class="fs-lg fw-semibold mb-0">Aisha Johnson</h4>
+                                            <p class="text-muted mb-0">Senior Software Engineer</p>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">"Working at BlueTag has been the highlight of my career. The
+                                        collaborative environment allows me to work with brilliant minds while
+                                        constantly learning and growing. The leadership team truly values innovation and
+                                        gives us the freedom to explore new ideas."</p>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <span class="ps-2">5 years at BlueTag</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body p-4 p-md-5">
+                                    <div class="d-flex align-items-center pb-3 mb-3">
+                                        <img src="https://placehold.co/100x100?text=M" class="rounded-circle" width="60"
+                                            alt="Michael Okonkwo">
+                                        <div class="ps-3">
+                                            <h4 class="fs-lg fw-semibold mb-0">Michael Okonkwo</h4>
+                                            <p class="text-muted mb-0">Product Manager</p>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">"The culture at BlueTag Technologies is unlike any other company
+                                        I've worked for. There's a perfect balance between professionalism and fun. We
+                                        work hard on challenging projects, but we also celebrate our successes together.
+                                        The company truly invests in its people through continuous learning
+                                        opportunities."</p>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star-half text-warning"></i>
+                                            <span class="ps-2">3 years at BlueTag</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body p-4 p-md-5">
+                                    <div class="d-flex align-items-center pb-3 mb-3">
+                                        <img src="https://placehold.co/100x100?text=S" class="rounded-circle" width="60"
+                                            alt="Sarah Adeyemi">
+                                        <div class="ps-3">
+                                            <h4 class="fs-lg fw-semibold mb-0">Sarah Adeyemi</h4>
+                                            <p class="text-muted mb-0">UX Designer</p>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">"As a designer, I appreciate how BlueTag values creativity and
+                                        user-centered thinking. I've been able to grow my skills while working on
+                                        meaningful projects that make a real difference for our clients. The supportive
+                                        team environment and work-life balance make this a place where I can thrive
+                                        professionally and personally."</p>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <span class="ps-2">2 years at BlueTag</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body p-4 p-md-5">
+                                    <div class="d-flex align-items-center pb-3 mb-3">
+                                        <img src="https://placehold.co/100x100?text=D" class="rounded-circle" width="60"
+                                            alt="David Nwosu">
+                                        <div class="ps-3">
+                                            <h4 class="fs-lg fw-semibold mb-0">David Nwosu</h4>
+                                            <p class="text-muted mb-0">DevOps Engineer</p>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">"BlueTag Technologies has given me the opportunity to work with
+                                        cutting-edge technologies while solving complex problems. The company's
+                                        commitment to continuous improvement and innovation keeps me engaged and excited
+                                        about my work every day. I appreciate the emphasis on both technical excellence
+                                        and personal growth."</p>
+                                    <div class="border-top mt-4 pt-4">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <span class="ps-2">4 years at BlueTag</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination (bullets) -->
+                    <div class="swiper-pagination position-relative pt-3 mt-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits & Perks -->
+        <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+            <div class="row justify-content-center text-center pb-3 mb-sm-2 mb-lg-3">
+                <div class="col-xl-6 col-lg-7 col-md-9">
+                    <h2 class="h1 mb-4">Benefits & Perks</h2>
+                    <p class="fs-lg text-muted mb-0">We believe in taking care of our team members with competitive
+                        benefits and thoughtful perks</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3">
+                <!-- Benefit 1: Health & Wellness -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bx bx-health fs-2 text-primary me-2"></i>
+                                <h3 class="h5 mb-0">Health & Wellness</h3>
+                            </div>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Comprehensive health insurance</span>
+                                </li>
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Mental health support</span>
+                                </li>
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Wellness program</span>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Gym membership allowance</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Work-Life Balance -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bx bx-time-five fs-2 text-primary me-2"></i>
+                                <h3 class="h5 mb-0">Work-Life Balance</h3>
+                            </div>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Flexible working hours</span>
+                                </li>
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Remote work options</span>
+                                </li>
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Generous paid time off</span>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Parental leave</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Professional Growth -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bx bx-trending-up fs-2 text-primary me-2"></i>
+                                <h3 class="h5 mb-0">Professional Growth</h3>
+                            </div>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Learning & development budget</span>
+                                </li>
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Conference attendance</span>
+                                </li>
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Mentorship programs</span>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Career advancement paths</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 4: Team Building -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bx bx-group fs-2 text-primary me-2"></i>
+                                <h3 class="h5 mb-0">Team Building</h3>
+                            </div>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Regular team outings</span>
+                                </li>
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Company retreats</span>
+                                </li>
+                                <li class="d-flex pb-1 mb-2">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Celebration of milestones</span>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                                    <span>Community service days</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+            <div class="container pt-lg-4">
+                <div class="row pb-5">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                            <img src="assets/img/BlueTag-Tech-logo-dark-bg.svg" width="180" alt="BlueTag Tech logo">
+                        </div>
+                        <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">BlueTag Technologies leads the way in
+                            software
+                            engineering, enterprise systems automation, and IT infrastructure integration. Our
+                            unwavering mission is to
+                            drive profound business transformations across the African continent through robust and
+                            sustainable
+                            technology solutions.</p>
+                        <form class="needs-validation" novalidate>
+                            <label for="subscr-email" class="form-label">Subscribe to receive exclusive
+                                insights.</label>
+                            <div class="input-group">
+                                <input type="email" id="subscr-email" class="form-control rounded-start ps-5"
+                                    placeholder="Your email" required>
+                                <i
+                                    class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                                <div class="invalid-tooltip position-absolute top-100 start-0">Email address format
+                                    seems invalid.</div>
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-6 pt-4 pt-md-1 pt-lg-0">
+                        <nav class="row justify-content-lg-end" aria-label="Footer navigation">
+                            <!-- Company Links -->
+                            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                                <h6 class="fs-base text-light mb-3">The Company</h6>
+                                <ul class="nav flex-column fs-sm">
+                                    <li class="nav-item">
+                                        <a href="home.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="about-v3.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="leadership.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">Leadership</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="clients-and-partners.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">Clients &
+                                            Partners</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="careers.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">Careers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="contact.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Solutions Links -->
+                            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                                <h6 class="fs-base text-light mb-3">Solutions & Products</h6>
+                                <ul class="nav flex-column fs-sm">
+                                    <li class="nav-item">
+                                        <a href="collegeport.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">CollegePort™</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="schoolport.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">SchoolPort™</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="progrid-erp.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">ProGrid ERP</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="bems.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">BEMS™</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="epms.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">EPMS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="solutions.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">All Solutions</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Resources & Connect -->
+                            <div class="col-6 col-lg-3 mt-4 mt-md-0">
+                                <h6 class="fs-base text-light mb-3">Connect With Us</h6>
+                                <ul class="nav flex-column fs-sm mb-4">
+                                    <li class="nav-item">
+                                        <a href="mailto:info@bluetag-it.com"
+                                            class="nav-link d-inline-block text-light py-1 px-0">
+                                            <i class="bx bx-envelope fs-lg me-2"></i>info@bluetag-it.com
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="tel:+2348081937426"
+                                            class="nav-link d-inline-block text-light py-1 px-0">
+                                            <i class="bx bx-phone fs-lg me-2"></i>+234 808 193 7426
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-inline-block text-light py-1 px-0">
+                                            <i class="bx bxl-linkedin fs-lg me-2"></i>LinkedIn
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-inline-block text-light py-1 px-0">
+                                            <i class="bx bxl-twitter fs-lg me-2"></i>Twitter
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-inline-block text-light py-1 px-0">
+                                            <i class="bx bxl-facebook fs-lg me-2"></i>Facebook
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-inline-block text-light py-1 px-0">
+                                            <i class="bx bxl-whatsapp fs-lg me-2"></i>WhatsApp
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <h6 class="fs-base text-light mb-3">Legal</h6>
+                                <ul class="nav flex-column fs-sm">
+                                    <li class="nav-item">
+                                        <a href="terms-of-use.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">Terms of Use</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="privacy-policy.html"
+                                            class="nav-link d-inline-block text-light py-1 px-0">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+                    <span class="text-light opacity-50">&copy; 2023 All Rights Reserved. BlueTag Technologies Ltd., duly
+                        registered
+                        with the Corporate Affairs Commission (CAC) under company number RC-1178140, is your trusted
+                        partner in
+                        transformative technology solutions.</span>
+                    <span class="text-light opacity-50"> | </span>
+                    <a href="team-credits.html" class="nav-link d-inline-block p-0 text-light opacity-75">Website
+                        Team</a>
+                </p>
+            </div>
+        </footer>
+
+
+        <!-- Back to top button -->
+        <a href="#top" class="btn-scroll-top" data-scroll>
+            <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+            <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+        </a>
+
+
+        <!-- Vendor Scripts -->
+        <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Main Theme Script -->
+        <script src="assets/js/theme.min.js"></script>
+</body>
+
+</html>

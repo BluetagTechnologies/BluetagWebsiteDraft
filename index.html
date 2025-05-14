@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home | BlueTag Technologies</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="BlueTag Technologies - A leading software engineering, enterprise systems automation and IT infrastructure integration solutions provider in Nigeria">
+  <!-- <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative"> -->
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
+
+  <!-- Main Theme Styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+  <!-- Page loading styles -->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .dark-mode .page-loading {
+      background-color: #0b0f19;
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1;
+    }
+
+    .page-loading-inner>span {
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #9397ad;
+    }
+
+    .dark-mode .page-loading-inner>span {
+      color: #fff;
+      opacity: .6;
+    }
+
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      border: .15em solid #b4b7c9;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    .dark-mode .page-spinner {
+      border-color: rgba(255, 255, 255, .4);
+      border-right-color: transparent;
+    }
+
+    @-webkit-keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    .video-wrapper {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transform: scale(1.2);
+      /* Adjust the scale factor as needed for your zoom effect */
+      transform-origin: center;
+    }
+
+    @media (min-width: 768px) {
+      .background-video {
+        transform: scale(2);
+        /* Adjust the scale factor for tablets and larger screens */
+      }
+    }
+
+    @media (max-width: 767px) {
+      .background-video {
+        transform: scale(4.5);
+        /* Default scale factor for phones */
+      }
+    }
+  </style>
+
+  <!-- Theme mode -->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+      root = document.getElementsByTagName('html')[0];
+    if (mode !== null && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  </script>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1000);
+      };
+    })();
+  </script>
+</head>
+
+
+<!-- Body -->
+
+<body>
+
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+  </div>
+
+
+  <!-- Page wrapper for sticky footer -->
+  <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+  <main class="page-wrapper">
+
+
+    <!-- Navbar -->
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+    <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+      <div class="container px-3">
+        <a href="home.html" class="navbar-brand pe-3">
+          <img src="assets/img/BlueTag-Tech-logo-light-bg.svg" width="140" alt="BlueTag Tech logo">
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="home.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">The Company</a>
+                <div class="dropdown-menu dropdown-menu-lg p-0">
+                  <div class="d-flex flex-column flex-lg-row">
+                    <!-- Main About Section -->
+                    <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3">
+                      <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">About BlueTag</h5>
+                          <p class="card-text fs-sm mb-3">We're a leading software solutions provider transforming
+                            organizations through innovative technology since 2014.</p>
+                          <a href="about-v3.html" class="btn btn-primary btn-sm">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3">
+                      <div class="row g-3">
+                        <!-- Leadership -->
+                        <div class="col-12">
+                          <a href="leadership.html" class="card card-hover border-0 shadow-sm text-decoration-none p-3">
+                            <div class="d-flex align-items-center">
+                              <i class="bx bx-group fs-3 text-primary me-2"></i>
+                              <div>
+                                <h6 class="mb-0">Leadership Team</h6>
+                                <p class="fs-xs text-muted mb-0">Meet the team that's leading BlueTag.</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Careers -->
+                        <div class="col-12">
+                          <a href="careers.html" class="card card-hover border-0 shadow-sm text-decoration-none p-3">
+                            <div class="d-flex align-items-center">
+                              <i class="bx bx-briefcase fs-3 text-primary me-2"></i>
+                              <div>
+                                <h6 class="mb-0">Careers</h6>
+                                <p class="fs-xs text-muted mb-0">Join our growing team of innovators.</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Our Culture -->
+                        <div class="col-12">
+                          <a href="life-at-bluetag-technologies.html"
+                            class="card card-hover border-0 shadow-sm text-decoration-none p-3">
+                            <div class="d-flex align-items-center">
+                              <i class="bx bx-building-house fs-3 text-primary me-2"></i>
+                              <div>
+                                <h6 class="mb-0">Our Culture</h6>
+                                <p class="fs-xs text-muted mb-0">Experience life at BlueTag Technologies.</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Clients/Partners -->
+                        <div class="col-12">
+                          <a href="clients-and-partners.html"
+                            class="card card-hover border-0 shadow-sm text-decoration-none p-3">
+                            <div class="d-flex align-items-center">
+                              <i class="bx bx-buildings fs-3 text-primary me-2"></i>
+                              <div>
+                                <h6 class="mb-0">Clients & Partners</h6>
+                                <p class="fs-xs text-muted mb-0">Organizations we work with and serve.</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Featured Content -->
+                    <div class="mega-dropdown-column d-none d-lg-block px-lg-4 py-lg-3 py-3">
+                      <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="https://placehold.co/600x400?text=Our+Story" class="card-img-top" alt="BlueTag Story">
+                        <div class="card-body">
+                          <h6 class="card-title">Our Journey</h6>
+                          <p class="card-text fs-sm">From startup to industry leader: The BlueTag story of innovation
+                            and growth.</p>
+                          <a href="about-v3.html#story" class="btn btn-link btn-sm px-0">
+                            Read Our Story <i class="bx bx-right-arrow-alt ms-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Solutions &amp; Products</a>
+                <div class="dropdown-menu dropdown-menu-lg p-0">
+                  <div class="d-flex flex-column flex-lg-row">
+                    <!-- Enterprise Solutions (Moved to first position as core business offerings) -->
+                    <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3">
+                      <h5 class="text-primary mb-3">Enterprise Solutions</h5>
+                      <div class="overflow-auto" style="max-height: 300px; scrollbar-width: thin;">
+                        <div class="row g-3">
+                          <!-- ProGrid ERP -->
+                          <div class="col-12">
+                            <a href="progrid-erp.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/progrid-icon.svg" width="32" alt="ProGrid ERP"
+                                  class="me-2" onerror="this.src='https://placehold.co/32x32?text=ERP'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">ProGrid ERP</h6>
+                                <p class="fs-xs text-muted mb-0">Enterprise resource planning</p>
+                              </div>
+                            </a>
+                          </div>
+                          <!-- BESTS -->
+                          <div class="col-12">
+                            <a href="bests.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/bests-icon.svg" width="32" alt="BESTS" class="me-2"
+                                  onerror="this.src='https://placehold.co/32x32?text=BESTS'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">BESTS&trade;</h6>
+                                <p class="fs-xs text-muted mb-0">Bespoke Enterprise Solutions & Training Services</p>
+                              </div>
+                            </a>
+                          </div>
+                          <!-- Membership Portal -->
+                          <div class="col-12">
+                            <a href="epms.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/epms-icon.svg" width="32" alt="EPMS" class="me-2"
+                                  onerror="this.src='https://placehold.co/32x32?text=EPMS'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">Membership Portal</h6>
+                                <p class="fs-xs text-muted mb-0">Membership management system</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Education Solutions (Moved to middle as specialized sector) -->
+                    <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3 border-start-lg">
+                      <h5 class="text-primary mb-3">Education Solutions</h5>
+                      <div class="overflow-auto" style="max-height: 300px; scrollbar-width: thin;">
+                        <div class="row g-3">
+                          <!-- SchoolPort -->
+                          <div class="col-12">
+                            <a href="schoolport.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/schoolport-icon.svg" width="32" alt="SchoolPort"
+                                  class="me-2" onerror="this.src='https://placehold.co/32x32?text=SP'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">SchoolPort&trade;</h6>
+                                <p class="fs-xs text-muted mb-0">K-12 school management system</p>
+                              </div>
+                            </a>
+                          </div>
+                          <!-- CollegePort -->
+                          <div class="col-12">
+                            <a href="collegeport.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/collegeport-icon.svg" width="32" alt="CollegePort"
+                                  class="me-2" onerror="this.src='https://placehold.co/32x32?text=CP'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">CollegePort&trade;</h6>
+                                <p class="fs-xs text-muted mb-0">Higher education platform</p>
+                              </div>
+                            </a>
+                          </div>
+                          <!-- LMS -->
+                          <div class="col-12">
+                            <a href="lms.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/lms-icon.svg" width="32" alt="LMS" class="me-2"
+                                  onerror="this.src='https://placehold.co/32x32?text=LMS'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">LMS</h6>
+                                <p class="fs-xs text-muted mb-0">Learning management system</p>
+                              </div>
+                            </a>
+                          </div>
+                          <!-- BEMS -->
+                          <div class="col-12">
+                            <a href="bems.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/bems-icon.svg" width="32" alt="BEMS" class="me-2"
+                                  onerror="this.src='https://placehold.co/32x32?text=BEMS'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">BEMS&trade;</h6>
+                                <p class="fs-xs text-muted mb-0">BlueTag Examination Management System</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Government & Specialized Systems (Renamed and reorganized) -->
+                    <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3 border-start-lg">
+                      <h5 class="text-primary mb-3">Specialized Systems</h5>
+                      <div class="overflow-auto" style="max-height: 300px; scrollbar-width: thin;">
+                        <div class="row g-3">
+                          <!-- EPMS -->
+                          <div class="col-12">
+                            <a href="epms.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/epms-icon.svg" width="32" alt="EPMS" class="me-2"
+                                  onerror="this.src='https://placehold.co/32x32?text=EPMS'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">EPMS</h6>
+                                <p class="fs-xs text-muted mb-0">Electronic Pension Management System</p>
+                              </div>
+                            </a>
+                          </div>
+                          <!-- STRAG -->
+                          <div class="col-12">
+                            <a href="strag.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/strag-icon.svg" width="32" alt="STRAG" class="me-2"
+                                  onerror="this.src='https://placehold.co/32x32?text=ST'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">STRAG&trade;</h6>
+                                <p class="fs-xs text-muted mb-0">Smart Transport Grid system</p>
+                              </div>
+                            </a>
+                          </div>
+                          <!-- CLAG Biometrics -->
+                          <div class="col-12">
+                            <a href="clag-biometrics.html" class="d-flex align-items-center text-decoration-none">
+                              <div class="flex-shrink-0">
+                                <img src="assets/img/solutions/clag-icon.svg" width="32" alt="CLAG Biometrics"
+                                  class="me-2" onerror="this.src='https://placehold.co/32x32?text=CLAG'">
+                              </div>
+                              <div class="flex-grow-1 ms-2">
+                                <h6 class="mb-0">CLAG&trade; Biometrics</h6>
+                                <p class="fs-xs text-muted mb-0">Biometric access control</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- View All Solutions Button -->
+                  <div class="card-footer py-2 text-center">
+                    <a href="solutions.html" class="btn btn-primary btn-sm">View All</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                <div class="dropdown-menu dropdown-menu-lg p-0">
+                  <div class="d-flex flex-column flex-lg-row">
+                    <!-- Main Resource Center Section -->
+                    <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3">
+                      <div class="submenu-level1__item">
+                        <a href="resource-center.html" class="card border-0 shadow-sm text-decoration-none p-3">
+                          <h5 class="card-title mb-2">Resource Center</h5>
+                          <p class="card-text fs-sm mb-3">Discover innovative software solutions to transform your
+                            business operations.</p>
+                          <div class="btn btn-primary btn-sm">View All Resources</div>
+                        </a>
+                      </div>
+
+                      <!-- Primary Resource Types -->
+                      <div class="row g-3 mt-2">
+                        <div class="col-6">
+                          <a href="blog-list-with-sidebar.html" class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-news fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">Blog</div>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="resource-center.html?type=case-study"
+                            class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-briefcase fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">Case Studies</div>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="resource-center.html?type=webinar"
+                            class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-video fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">Webinars</div>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="resource-center.html?type=ebook"
+                            class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-book fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">eBooks</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Secondary Resource Types -->
+                    <div class="mega-dropdown-column px-lg-4 py-lg-3 py-3 border-start-lg">
+                      <h6 class="mb-3">Industry Insights</h6>
+                      <div class="row g-3">
+                        <div class="col-6">
+                          <a href="resource-center.html?type=white-paper"
+                            class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-file fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">White Papers</div>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="resource-center.html?type=infographic"
+                            class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-bar-chart-alt-2 fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">Infographics</div>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="customer-stories.html" class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-user-voice fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">Customer Stories</div>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="resource-center.html?type=video"
+                            class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-movie-play fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">Videos</div>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="tech-insights.html" class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-bulb fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">Tech Insights</div>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="success-stories.html" class="d-flex align-items-center text-decoration-none">
+                            <i class="bx bx-trophy fs-4 text-primary me-2"></i>
+                            <div class="submenu-level3__item">Success Stories</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Featured Content -->
+                    <div class="mega-dropdown-column d-none d-lg-block px-lg-4 py-lg-3 py-3 border-start-lg">
+                      <div class="submenu-post">
+                        <a href="resources/digital-transformation-guide.html"
+                          class="card border-0 shadow-sm overflow-hidden text-decoration-none">
+                          <div class="submenu-post__img-wrapper">
+                            <img src="https://placehold.co/600x400?text=Digital+Transformation" class="card-img-top"
+                              alt="Digital Transformation Guide">
+                          </div>
+                          <div class="card-body">
+                            <div class="fs-xs text-uppercase text-primary mb-1">WHITEPAPER</div>
+                            <h6 class="card-title">Digital Transformation Guide for Modern Enterprises</h6>
+                            <div class="btn btn-link btn-sm px-0">
+                              Learn More <i class="bx bx-right-arrow-alt ms-1"></i>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="offcanvas-header border-top">
+            <a href="#" class="btn btn-primary w-100" target="_blank" rel="noopener">
+              &nbsp;Get Started
+            </a>
+          </div>
+        </div>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <input type="checkbox" class="form-check-input" id="theme-mode">
+          <label class="form-check-label d-none d-sm-block" for="theme-mode"><small>Light</small></label>
+          <label class="form-check-label d-none d-sm-block" for="theme-mode"><small>Dark</small></label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+          &nbsp;Get Started
+        </a>
+      </div>
+    </header>
+
+
+    <!-- Hero slider + BG parallax -->
+    <section class="jarallax dark-mode bg-dark py-xxl-5" data-jarallax data-speed="0.4">
+      <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"></span>
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline class="background-video">
+          <source src="assets/video/162734-576p25.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- <div class="jarallax-img" style="background-image: url(assets/img/landing/software-company/ali-mkumbwa-K-f_gTvdwTM-unsplash.jpg);"></div> -->
+      <div class="position-relative text-center zindex-5 overflow-hidden pt-4 py-md-5">
+
+        <!-- Slider controls (Prev / next) -->
+        <button type="button" id="hero-prev"
+          class="btn btn-prev btn-icon btn-xl bg-transparent shadow-none position-absolute top-50 start-0 translate-middle-y d-none d-md-inline-flex ms-n3 ms-lg-2">
+          <i class="bx bx-chevron-left fs-1"></i>
+        </button>
+        <button type="button" id="hero-next"
+          class="btn btn-next btn-icon btn-xl bg-transparent shadow-none position-absolute top-50 end-0 translate-middle-y d-none d-md-inline-flex me-n3 me-lg-2">
+          <i class="bx bx-chevron-right fs-1"></i>
+        </button>
+
+        <!-- Slider -->
+        <div class="container text-center py-xl-5">
+          <div class="row justify-content-center pt-lg-5">
+            <div class="col-xl-8 col-lg-9 col-md-10 col-11">
+              <div class="swiper pt-5 pb-4 py-md-5" data-swiper-options='{
+                  "effect": "fade",
+                  "speed": 500,
+                  "autoplay": {
+                    "delay": 5500,
+                    "disableOnInteraction": false
+                  },
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": true
+                  },
+                  "navigation": {
+                    "prevEl": "#hero-prev",
+                    "nextEl": "#hero-next"
+                  }
+                }'>
+                <div class="swiper-wrapper">
+
+                  <!-- Item -->
+                  <div class="swiper-slide">
+                    <h2 class="display-5 from-start mb-lg-4">Transforming Businesses through Sustainable Technology
+                      Solutions</h2>
+                    <div class="from-end">
+                      <p class="fs-xl text-light opacity-70 pb-2 mb-lg-5">We are focused on value, quality and
+                        user-friendly technology solutions while aligning with the best industry methodologies,
+                        protocols and standards to ensure the most fulfilling excellent customer relationships.</p>
+                    </div>
+                    <div class="scale-up delay-1">
+                      <a href="#" class="btn btn-primary shadow-primary btn-lg">Learn More</a>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="swiper-slide">
+                    <h2 class="display-5 from-start mb-lg-4">Leading Software Engineering and IT Solutions Provider in
+                      Nigeria</h2>
+                    <div class="from-end">
+                      <p class="fs-xl text-light opacity-70 pb-2 mb-lg-5">By setting and exceeding industry standards,
+                        we actively shape the future of technology in Nigeria, bringing unparalleled solutions to
+                        businesses across the nation.</p>
+                    </div>
+                    <div class="scale-up delay-1">
+                      <a href="#" class="btn btn-primary shadow-primary btn-lg">View Case Studies</a>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="swiper-slide">
+                    <h2 class="display-5 from-start mb-lg-4">Empowering Business Prosperity Through Technology</h2>
+                    <div class="from-end">
+                      <p class="fs-xl text-light opacity-70 pb-2 mb-lg-5">Our commitment to innovation, efficiency, and
+                        strategic technological solutions positions businesses for unparalleled growth and prosperity in
+                        the dynamic digital landscape.</p>
+                    </div>
+                    <div class="scale-up delay-1">
+                      <a href="#" class="btn btn-primary shadow-primary btn-lg">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pagination (bullets) -->
+                <div class="swiper-pagination position-relative d-md-none pt-2 mt-5"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container d-flex flex-column flex-sm-row align-items-center justify-content-between position-relative zindex-5 pb-5">
+        <div class="d-flex mb-4 mb-sm-0">
+          <a href="#" class="btn btn-icon btn-secondary btn-linkedin rounded-circle me-2">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-facebook rounded-circle me-2">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-twitter rounded-circle me-2">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <!-- <a href="#" class="btn btn-icon btn-secondary btn-instagram rounded-circle">
+            <i class="bx bxl-instagram"></i>
+          </a> -->
+        </div>
+        <a href="#" class="nav-link px-0">
+          Our case studies
+          <i class="bx bx-right-arrow-circle fs-4 ms-2"></i>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- About -->
+    <section class="container pt-5 mt-2 mt-md-4 mt-lg-5" style="z-index: 2;">
+      <div class="row pt-xl-3">
+        <div class="col-md-5 text-center text-md-start pb-5">
+          <h1 class="mb-4">Welcome to <span style="color: #00BCFF;">BlueTag</span> Technologies</h1>
+          <p class="fs-lg pb-lg-3 mb-4">We are a leading software engineering, enterprise systems automation and IT
+            infrastructure integration solutions provider in Nigeria that is on a mission to transform businesses in the
+            African continent through sustainable technology solutions.</p>
+          <a href="#" class="btn btn-primary shadow-primary btn-lg">More About Us</a>
+          <div class="mt-3 mt-sm-0 pt-4 pt-sm-5 mt-xl-4 mb-lg-5">
+            <h2 class="h6 mb-4">Some of our awards:</h2>
+            <img src="assets/img/landing/software-company/awards.svg" alt="Awards">
+          </div>
+        </div>
+        <div class="col-xl-6 col-md-7 offset-xl-1 pb-4 pb-sm-3 pb-lg-0 mb-4 mb-sm-5 mb-lg-0">
+          <img src="assets/img/landing/software-company/to-be-replaced-parkway-team.jpg" class="rounded-3 shadow-sm"
+            alt="Image">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Solutions -->
+    <section class="bg-secondary pb-md-2 pb-lg-5">
+      <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
+      <div class="container pb-4 pt-5">
+        <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Our Solutions</h2>
+        <div class="row align-items-center pb-5 mb-lg-2">
+          <div class="col-md-8 text-center text-md-start">
+            <p class="fs-lg text-muted mb-md-0">We prioritize supporting organizations and governments grow through our
+              digital transformation services, providing tailored and impactful solutions by thoroughly understanding
+              their unique needs, challenges, and long-term objectives.</p>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
+            <a href="#" class="btn btn-outline-primary btn-lg">See all solutions</a>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2">
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3">
+            <a href="collegeport.html"
+              class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+              <div class="card-body pt-3">
+                <div
+                  class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <img src="assets/img/services/icons/mobile-app.svg" class="d-block m-1" width="40" alt="Icon">
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  CollegePort&trade;
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">Empowering higher institutions, our advanced school portal solution
+                  stands as a comprehensive, robust, and user-friendly platform. It offers unparalleled tools and
+                  functionalities, automating academic and administrative processes to enhance efficiency, productivity,
+                  and foster student success.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3">
+            <a href="#"
+              class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div
+                  class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <img src="assets/img/services/icons/rocket.svg" class="d-block m-1" width="40" alt="Icon">
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  ProGrid ERP
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">Empower your organization with streamlined automation, eliminating data
+                  silos and boosting productivity. Enhance administrative processes, ensure secure tracking and
+                  compliance, make informed decisions with real-time data, and drive transparency and accountability for
+                  unparalleled efficiency.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3">
+            <a href="#"
+              class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div
+                  class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <img src="assets/img/services/icons/cms.svg" class="d-block m-1" width="40" alt="Icon">
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  SchoolPort&trade;
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">A streamlined solution for nursery, primary, and secondary school
+                  administrators. Our integrated platform simplifies student-centric processes, ensuring high
+                  performance, data intelligence, and user-friendly operations. Students and parents gain controlled
+                  access for efficient management of academic information, online payments, and essential updates.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3">
+            <a href="#"
+              class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div
+                  class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <img src="assets/img/services/icons/analytics.svg" class="d-block m-1" width="40" alt="Icon">
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  Electronic Pension Mgt. System
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">Streamlining pension management with secure digitization. From efficient
+                  data storage to biometric capture, it tackles key challenges—aggregating data, proof of life
+                  verification, and pension payments. Compliance-driven, it ensures secure cloud-based data management,
+                  simplifies verification, and offers rule-based payment workflows for seamless administration.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3">
+            <a href="#"
+              class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div
+                  class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <img src="assets/img/services/icons/web-search.svg" class="d-block m-1" width="40" alt="Icon">
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  Learning Mgt. System
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">Our web-based e-learning solution revolutionizes education, ensuring
+                  comfort and enhanced communication. Instructors easily upload materials, form groups, and promote
+                  efficient collaboration. With a focus on enriching learning experiences, our LMS empowers both
+                  instructors and learners for success.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3">
+            <a href="#"
+              class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div
+                  class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <img src="assets/img/services/icons/timer.svg" class="d-block m-1" width="40" alt="Icon">
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  CLAG&trade; Biometrics
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">Combat identity fraud with our smart biometric solution. Securely enroll
+                  and aggregate biometric data, providing organizations with a unique, data-driven service for authentic
+                  identification and verification. Tailored for businesses of all sizes, CLAG&trade; is your key to a
+                  credible and fraud-resistant biometric database.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Case studies -->
+    <section class="bg-secondary pt-1">
+      <div class="container">
+        <h2 class="h1 text-center text-md-start mb-lg-4">Case Studies</h2>
+        <div class="row align-items-center pb-5">
+          <div class="col-md-8 col-lg-7 col-xl-6 text-center text-md-start">
+            <p class="fs-lg text-muted mb-md-0">Discover how BlueTag Technologies has crafted bespoke solutions, diving
+              into diverse markets and challenges to bring success stories to life. </p>
+          </div>
+          <div class="col-md-4 col-lg-5 col-xl-6 d-flex justify-content-center justify-content-md-end">
+            <a href="#" class="btn btn-outline-primary btn-lg">See all case studies</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="position-relative py-lg-4 py-xl-5">
+
+        <!-- Swiper tabs -->
+        <div class="swiper-tabs position-absolute top-0 start-0 w-100 h-100">
+          <div id="image-1" class="jarallax position-absolute top-0 start-0 w-100 h-100 swiper-tab active" data-jarallax
+            data-speed="0.4">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+            <div class="jarallax-img"
+              style="background-image: url(assets/img/landing/software-company/case-study-bw-bg-imt.jpg);"></div>
+          </div>
+          <div id="image-2" class="jarallax position-absolute top-0 start-0 w-100 h-100 swiper-tab" data-jarallax
+            data-speed="0.4">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+            <div class="jarallax-img"
+              style="background-image: url(assets/img/landing/software-company/case-study-bg.jpg);"></div>
+          </div>
+        </div>
+
+        <!-- Swiper slider -->
+        <div class="container position-relative zindex-5 py-5">
+          <div class="row py-2 py-md-3">
+            <div class="col-xl-5 col-lg-7 col-md-9">
+
+              <!-- Slider controls (Prev / next) -->
+              <div class="d-flex justify-content-center justify-content-md-start pb-3 mb-3">
+                <button type="button" id="case-study-prev" class="btn btn-prev btn-icon btn-sm bg-white me-2">
+                  <i class="bx bx-chevron-left"></i>
+                </button>
+                <button type="button" id="case-study-next" class="btn btn-next btn-icon btn-sm bg-white ms-2">
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+
+              <!-- Card -->
+              <div class="card bg-white shadow-sm p-3">
+                <div class="card-body">
+                  <div class="swiper" data-swiper-options='{
+                      "spaceBetween": 30,
+                      "loop": true,
+                      "tabs": true,
+                      "pagination": {
+                        "el": "#case-study-pagination",
+                        "clickable": true
+                      },
+                      "navigation": {
+                        "prevEl": "#case-study-prev",
+                        "nextEl": "#case-study-next"
+                      }
+                    }'>
+                    <div class="swiper-wrapper">
+
+                      <!-- Item -->
+                      <div class="swiper-slide" data-swiper-tab="#image-1">
+                        <img src="assets/img/landing/software-company/case-study-logo03.jpg" class="d-block mb-3"
+                          width="72" alt="Logo">
+                        <h3 class="mb-2">IMT Enugu case study</h3>
+                        <p class="fs-sm text-muted border-bottom pb-3 mb-3">State-owned Polytechnic</p>
+                        <p class="pb-2 pb-lg-3 mb-3">Witness streamlined admissions, automated student clearances, and
+                          enhanced administrative efficiency. Discover how this partnership has propelled IMT Enugu
+                          towards a future of academic excellence.</p>
+                        <a href="#" class="btn btn-primary">Read full case study</a>
+                      </div>
+
+                      <!-- Item -->
+                      <div class="swiper-slide" data-swiper-tab="#image-2">
+                        <img src="assets/img/landing/software-company/case-study-logo04.jpg" class="d-block mb-3"
+                          width="72" alt="Logo">
+                        <h3 class="mb-2">InnovateTech case study</h3>
+                        <p class="fs-sm text-muted border-bottom pb-3 mb-3">Data Analytics Company</p>
+                        <p class="pb-2 pb-lg-3 mb-3">Uncover how ProGrid ERP streamlined administrative processes,
+                          secured tracking and reporting, and empowered faster decision-making. See firsthand how
+                          InnovateTech thrived in the age of technological empowerment with BlueTag's transformative
+                          solutions.</p>
+                        <a href="#" class="btn btn-primary">Read full case study</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination (bullets) -->
+              <div class="dark-mode pt-4 mt-3">
+                <div id="case-study-pagination" class="swiper-pagination position-relative bottom-0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Features -->
+    <section class="container py-5 my-2 my-md-4 my-lg-5">
+      <h2 class="h1 text-center pt-1 pt-xl-2 mb-4">Why Choose Us?</h2>
+      <p class="fs-lg text-muted text-center pb-4 mb-2 mb-lg-3">Choosing BlueTag Technologies means opting for
+        unparalleled expertise, solutions tailored to your needs,<br> and a track record of transformative success.</p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 pb-xl-3">
+        <div class="col text-center border-end">
+          <div class="card d-table border-0 rounded-circle shadow-sm p-3 mx-auto mb-4">
+            <img src="assets/img/landing/software-company/features/01.svg" width="32" alt="Icon">
+          </div>
+          <h3 class="h6 mb-2 mb-lg-0">Compliance Assured, Always.</h3>
+        </div>
+        <div class="col text-center border-end">
+          <div class="card d-table border-0 rounded-circle shadow-sm p-3 mx-auto mb-4">
+            <img src="assets/img/landing/software-company/features/02.svg" width="32" alt="Icon">
+          </div>
+          <h3 class="h6 mb-2 mb-lg-0">Security Beyond Expectations.</h3>
+        </div>
+        <div class="col text-center border-end">
+          <div class="card d-table border-0 rounded-circle shadow-sm p-3 mx-auto mb-4">
+            <img src="assets/img/landing/software-company/features/03.svg" width="32" alt="Icon">
+          </div>
+          <h3 class="h6 mb-2 mb-lg-0">Trusted by Governments and Corporates.</h3>
+        </div>
+        <div class="col text-center">
+          <div class="card d-table border-0 rounded-circle shadow-sm p-3 mx-auto mb-4">
+            <img src="assets/img/landing/software-company/features/04.svg" width="32" alt="Icon">
+          </div>
+          <h3 class="h6 mb-2 mb-lg-0">Factual, Proven Success Stories.</h3>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Testimonials (Slider) -->
+    <section class="container pb-5 mb-md-2 mb-xl-4">
+      <div class="row pb-lg-2">
+        <div class="col-md-5 mb-4 mb-md-0">
+          <div class="card justify-content-center bg-dark h-100 p-4 p-lg-5">
+            <div class="p-2">
+              <h3 class="display-4 text-primary mb-1">100+</h3>
+              <h2 class="text-light pb-5 mb-2">Brands Already Served</h2>
+              <a href="#" class="d-inline-flex align-items-center rounded-3 text-decoration-none py-3 px-4"
+                style="background-color: #1d1d1d;">
+                <div class="pe-3">
+                  <div class="fs-xs text-light text-uppercase opaciy-70 mb-2">Reviewed on</div>
+                  <img src="assets/img/about/google-reviews-logo.png" width="97" alt="Clutch">
+                </div>
+                <div class="ps-1">
+                  <div class="text-nowrap mb-2">
+                    <i class="bx bxs-star text-warning"></i>
+                    <i class="bx bxs-star text-warning"></i>
+                    <i class="bx bxs-star text-warning"></i>
+                    <i class="bx bxs-star text-warning"></i>
+                    <i class="bx bxs-star text-warning"></i>
+                  </div>
+                  <div class="text-light opacity-70">125 reviews</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="card border-0 shadow-sm p-4 p-xxl-5">
+
+            <!-- Slider prev/next buttons + Quotation mark -->
+            <div class="d-flex justify-content-between pb-4 mb-2">
+              <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none">
+                <i class="bx bxs-quote-left"></i>
+              </span>
+              <div class="d-flex">
+                <button type="button" id="testimonial-prev" class="btn btn-prev btn-icon btn-sm me-2">
+                  <i class="bx bx-chevron-left"></i>
+                </button>
+                <button type="button" id="testimonial-next" class="btn btn-next btn-icon btn-sm ms-2">
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Slider -->
+            <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+                "spaceBetween": 24,
+                "loop": true,
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "clickable": true
+                },
+                "navigation": {
+                  "prevEl": "#testimonial-prev",
+                  "nextEl": "#testimonial-next"
+                }
+              }'>
+              <div class="swiper-wrapper">
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto" data-swiper-tab="#author-1">
+                  <figure class="card h-100 position-relative border-0 bg-transparent">
+                    <blockquote class="card-body p-0 mb-0">
+                      <p class="fs-lg mb-0">Being at the forefront of our IT landscape, the impact of BlueTag
+                        Technologies' solutions, particularly <b>CollegePort&trade;</b> and <b>SchoolPort&trade;</b>,
+                        has been transformative. CollegePort&trade;, with its comprehensive suite of academic and
+                        administrative tools, has not only boosted efficiency but also ensured the success of our
+                        students through streamlined processes.<br><br>SchoolPort&trade;, the integrated solution for
+                        nursery, primary, and secondary school administrators, has repositioned our educational
+                        institution for high performance and data intelligence. BlueTag Technologies' commitment to
+                        excellence is not just seen; it's felt in every aspect of our educational journey.</p>
+                    </blockquote>
+                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                      <img src="assets/img/avatar/50.jpg" width="48" class="rounded-circle" alt="Ralph Edwards">
+                      <div class="ps-3">
+                        <h5 class="fw-semibold lh-base mb-0">Chiamaka Okonkwo</h5>
+                        <span class="fs-sm text-muted">Director of Educational Technology at Harmony International
+                          Academy</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto" data-swiper-tab="#author-2">
+                  <figure class="card h-100 position-relative border-0 bg-transparent">
+                    <blockquote class="card-body p-0 mb-0">
+                      <p class="fs-lg mb-0">I've witnessed a significant shift in our operations since partnering with
+                        BlueTag. The implementation of <b>ProGrid ERP</b> has seamlessly integrated our processes,
+                        boosting efficiency and breaking down operational silos. From streamlined workflows to real-time
+                        reporting, ProGrid ERP has played a pivotal role in elevating our operational standards.<br><br>
+                        BlueTag's unwavering dedication to precision ensures not just efficiency but a gold standard in
+                        our industry. Their partnership is more than a service provider; they are strategic architects
+                        driving our operational excellence.</p>
+                    </blockquote>
+                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                      <img src="assets/img/avatar/48.jpg" width="48" class="rounded-circle" alt="Annette Black">
+                      <div class="ps-3">
+                        <h5 class="fw-semibold lh-base mb-0">Abdul Ibrahim</h5>
+                        <span class="fs-sm text-muted">Chief Operations Officer at InnovateTech Ltd.</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto" data-swiper-tab="#author-3">
+                  <figure class="card h-100 position-relative border-0 bg-transparent">
+                    <blockquote class="card-body p-0 mb-0">
+                      <p class="fs-lg mb-0">BlueTag's cutting-edge <b>CLAG&trade; Biometrics</b>, have brought a new
+                        level of precision and reliability to our management processes. The emphasis on security and
+                        compliance is evident in every aspect of their offerings, providing us with a secure and
+                        seamless environment. Our data is not just managed; it is fortified against risks. BlueTag has
+                        proven to be an invaluable partner in our journey, ensuring that our operations are not only
+                        compliant but also optimized for success.</p>
+                    </blockquote>
+                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                      <img src="assets/img/avatar/51.jpg" width="48" class="rounded-circle" alt="Darrell Steward">
+                      <div class="ps-3">
+                        <h5 class="fw-semibold lh-base mb-0">Ngozi Eze</h5>
+                        <span class="fs-sm text-muted">VP Human Resources at SecureBank Nigeria</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto" data-swiper-tab="#author-3">
+                  <figure class="card h-100 position-relative border-0 bg-transparent">
+                    <blockquote class="card-body p-0 mb-0">
+                      <p class="fs-lg mb-0">At the helm of our business, I've witnessed the transformative impact of
+                        BlueTag Technologies' solutions, particularly their <b>bespoke enterprise solutions and training
+                          services (BESTS)</b>. BESTS encapsulates BlueTag's commitment to innovation and expertise,
+                        offering a range of customizable ICT systems. Their agile approach, coupled with a deep
+                        understanding of business needs, ensures that deliverables are not only met but exceeded within
+                        timelines. <br><br>BlueTag doesn't just save businesses costs; they deliver unparalleled value.
+                        As a
+                        partner, they've not only brought our creative ideas to life but have become the driving force
+                        behind our business growth.</p>
+                    </blockquote>
+                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                      <img src="assets/img/avatar/52.jpg" width="48" class="rounded-circle" alt="Darrell Steward">
+                      <div class="ps-3">
+                        <h5 class="fw-semibold lh-base mb-0">Emeka Okafor</h5>
+                        <span class="fs-sm text-muted">CEO GreenTech Innovations</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto" data-swiper-tab="#author-3">
+                  <figure class="card h-100 position-relative border-0 bg-transparent">
+                    <blockquote class="card-body p-0 mb-0">
+                      <p class="fs-lg mb-0">In my role as the former Pension Minister of Nigeria, the impact of BlueTag
+                        Technologies' solutions, especially the innovative <b>Electronic Pension Management System
+                          (EPMS)</b>, has been profound. EPMS has revolutionized pension management, providing a secure
+                        and efficient solution for the storage, retrieval, and overall management of pensioners'
+                        information. BlueTag's commitment to reliability and compliance is evident in every facet of
+                        EPMS, making it an indispensable tool for pension management. Choosing BlueTag means choosing a
+                        partner dedicated to excellence, ensuring pensioners' data is not just managed but safeguarded
+                        with the highest standards.</p>
+                    </blockquote>
+                    <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                      <img src="assets/img/avatar/53.jpg" width="48" class="rounded-circle" alt="Darrell Steward">
+                      <div class="ps-3">
+                        <h5 class="fw-semibold lh-base mb-0">Aisha Mohammed</h5>
+                        <span class="fs-sm text-muted">Fmr. Minister of PenCom</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <!-- Pagination (bullets) -->
+              <div class="swiper-pagination position-relative pt-3 mt-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Brands (Carousel) -->
+    <section class="container pb-5">
+      <div class="swiper mx-n2" data-swiper-options='{
+          "slidesPerView": 2,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 3,
+              "spaceBetween": 8
+            },
+            "650": {
+              "slidesPerView": 4,
+              "spaceBetween": 8
+            },
+            "900": {
+              "slidesPerView": 5,
+              "spaceBetween": 8
+            },
+            "1100": {
+              "slidesPerView": 6,
+              "spaceBetween": 8
+            }
+          }
+        }'>
+        <div class="swiper-wrapper">
+
+          <!-- Item -->
+          <div class="swiper-slide py-3">
+            <a href="#" class="card card-body card-hover px-2 mx-2">
+              <img src="assets/img/brands/01.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="swiper-slide py-3">
+            <a href="#" class="card card-body card-hover px-2 mx-2">
+              <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="swiper-slide py-3">
+            <a href="#" class="card card-body card-hover px-2 mx-2">
+              <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="swiper-slide py-3">
+            <a href="#" class="card card-body card-hover px-2 mx-2">
+              <img src="assets/img/brands/04.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="swiper-slide py-3">
+            <a href="#" class="card card-body card-hover px-2 mx-2">
+              <img src="assets/img/brands/05.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="swiper-slide py-3">
+            <a href="#" class="card card-body card-hover px-2 mx-2">
+              <img src="assets/img/brands/06.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+            </a>
+          </div>
+        </div>
+
+        <!-- Pagination (bullets) -->
+        <div class="swiper-pagination position-relative pt-2 mt-4"></div>
+      </div>
+    </section>
+
+
+    <!-- News slider -->
+    <section class="bg-secondary border-bottom border-light py-5">
+      <div class="container py-md-3 py-lg-5">
+        <h2 class="h1 text-center pb-2">Latest Tech Bytes</h2>
+        <div class="position-relative mx-md-2 px-md-5">
+
+          <!-- Slider controls (Prev / next) -->
+          <button type="button" id="news-prev"
+            class="btn btn-prev btn-icon btn-sm position-absolute top-50 start-0 translate-middle-y mt-n4 d-none d-md-inline-flex">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <button type="button" id="news-next"
+            class="btn btn-next btn-icon btn-sm position-absolute top-50 end-0 translate-middle-y mt-n4 d-none d-md-inline-flex">
+            <i class="bx bx-chevron-right"></i>
+          </button>
+
+          <!-- Swiper slider -->
+          <div class="swiper swiper-nav-onhover mx-n2" data-swiper-options='{
+              "slidesPerView": 1,
+              "loop": true,
+              "spaceBetween": 8,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+              "navigation": {
+                "prevEl": "#news-prev",
+                "nextEl": "#news-next"
+              },
+              "breakpoints": {
+                "0": {
+                  "slidesPerView": 1
+                },
+                "560": {
+                  "slidesPerView": 2
+                },
+                "992": {
+                  "slidesPerView": 3
+                }
+              }
+            }'>
+            <div class="swiper-wrapper">
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto py-3">
+                <article class="card p-md-3 p-2 border-0 shadow-sm card-hover-primary h-100 mx-2">
+                  <div class="card-body pb-0">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <a href="#"
+                        class="badge fs-sm text-nav bg-secondary text-decoration-none position-relative zindex-2">EdTech</a>
+                      <span class="fs-sm text-muted">6 hours ago</span>
+                    </div>
+                    <h3 class="h4">
+                      <a href="#" class="stretched-link">Revolutionizing Education: Unleashing the Power of
+                        CollegePort&trade;</a>
+                    </h3>
+                    <p class="mb-0">Discover how CollegePort&trade; is reshaping the landscape of higher education with
+                      its comprehensive suite of tools. From streamlined admissions to automated student clearances,
+                      explore the future of academic excellence.</p>
+                  </div>
+                  <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-like fs-lg me-1"></i>
+                      <span class="fs-sm">124</span>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-comment fs-lg me-1"></i>
+                      <span class="fs-sm">64</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <i class="bx bx-share-alt fs-lg me-1"></i>
+                      <span class="fs-sm">250</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto py-3">
+                <article class="card p-md-3 p-2 border-0 shadow-sm card-hover-primary h-100 mx-2">
+                  <div class="card-body pb-0">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <a href="#"
+                        class="badge fs-sm text-nav bg-secondary text-decoration-none position-relative zindex-2">Strategy</a>
+                      <span class="fs-sm text-muted">18 hours ago</span>
+                    </div>
+                    <h3 class="h4">
+                      <a href="#" class="stretched-link">Transforming Organizations into Efficient Powerhouses</a>
+                    </h3>
+                    <p class="mb-0">Delve into the world of ProGrid ERP and witness how it empowers organizations, large
+                      and small, to streamline processes, enhance decision-making, and eliminate workflow bottlenecks.
+                      Uncover the secrets to driving business growth through technological prowess. </p>
+                  </div>
+                  <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-like fs-lg me-1"></i>
+                      <span class="fs-sm">302</span>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-comment fs-lg me-1"></i>
+                      <span class="fs-sm">80</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <i class="bx bx-share-alt fs-lg me-1"></i>
+                      <span class="fs-sm">723</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto py-3">
+                <article class="card p-md-3 p-2 border-0 shadow-sm card-hover-primary h-100 mx-2">
+                  <div class="card-body pb-0">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <a href="#"
+                        class="badge fs-sm text-nav bg-secondary text-decoration-none position-relative zindex-2">Pension</a>
+                      <span class="fs-sm text-muted">Yesterday</span>
+                    </div>
+                    <h3 class="h4">
+                      <a href="#" class="stretched-link">Securing Pensioners' Futures: The EPMS Advantage</a>
+                    </h3>
+                    <p class="mb-0">Explore the groundbreaking Electronic Pension Management System (EPMS) and its role
+                      in revolutionizing pension data management. Learn how EPMS brings security, efficiency, and peace
+                      of mind to pension administrators and retirees alike.</p>
+                  </div>
+                  <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-like fs-lg me-1"></i>
+                      <span class="fs-sm">6</span>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-comment fs-lg me-1"></i>
+                      <span class="fs-sm">1</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <i class="bx bx-share-alt fs-lg me-1"></i>
+                      <span class="fs-sm">5</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto py-3">
+                <article class="card p-md-3 p-2 border-0 shadow-sm card-hover-primary h-100 mx-2">
+                  <div class="card-body pb-0">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <a href="#"
+                        class="badge fs-sm text-nav bg-secondary text-decoration-none position-relative zindex-2">Education</a>
+                      <span class="fs-sm text-muted">2 days ago</span>
+                    </div>
+                    <h3 class="h4">
+                      <a href="#" class="stretched-link">Navigating the Future of Learning: BlueTag LMS Unveiled</a>
+                    </h3>
+                    <p class="mb-0">Take a journey into the future of education with BlueTag LMS. From innovative
+                      e-learning services to fostering collaboration, discover how this platform is redefining the way
+                      institutions and organizations approach teaching and learning.</p>
+                  </div>
+                  <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-like fs-lg me-1"></i>
+                      <span class="fs-sm">75</span>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-comment fs-lg me-1"></i>
+                      <span class="fs-sm">198</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <i class="bx bx-share-alt fs-lg me-1"></i>
+                      <span class="fs-sm">45</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto py-3">
+                <article class="card p-md-3 p-2 border-0 shadow-sm card-hover-primary h-100 mx-2">
+                  <div class="card-body pb-0">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <a href="#"
+                        class="badge fs-sm text-nav bg-secondary text-decoration-none position-relative zindex-2">Training</a>
+                      <span class="fs-sm text-muted">2 days ago</span>
+                    </div>
+                    <h3 class="h4">
+                      <a href="#" class="stretched-link">Bridging Gaps, Empowering Businesses: BESTS in Action</a>
+                    </h3>
+                    <p class="mb-0">Uncover the versatility of BlueTag's Bespoke Enterprise Solutions & Training
+                      Services (BESTS). From digital skills training to oil & gas leak detection, witness how BlueTag is
+                      not just a solutions provider but a true partner in business growth.</p>
+                  </div>
+                  <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-like fs-lg me-1"></i>
+                      <span class="fs-sm">234</span>
+                    </div>
+                    <div class="d-flex align-items-center me-3">
+                      <i class="bx bx-comment fs-lg me-1"></i>
+                      <span class="fs-sm">54</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <i class="bx bx-share-alt fs-lg me-1"></i>
+                      <span class="fs-sm">835</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Pagination (bullets) -->
+            <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="position-relative bg-dark py-5">
+      <span class="position-absolute top-0 start-0 w-100 h-100"
+        style="background-color: rgba(255, 255, 255, .05)"></span>
+      <div class="container position-relative zindex-5 text-center my-xl-3 py-1 py-md-4 py-lg-5">
+        <p class="lead text-light opacity-70 mb-3">Ready for a demo or consultation?</p>
+        <h2 class="h1 text-light pb-3 pb-lg-0 mb-lg-5">Let's Discuss Your Goals</h2>
+        <a href="#" class="btn btn-primary shadow-primary btn-lg">Get Started</a>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+    <div class="container pt-lg-4">
+      <div class="row pb-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+            <img src="assets/img/BlueTag-Tech-logo-dark-bg.svg" width="180" alt="BlueTag Tech logo">
+          </div>
+          <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">BlueTag Technologies leads the way in software
+            engineering, enterprise systems automation, and IT infrastructure integration. Our unwavering mission is to
+            drive profound business transformations across the African continent through robust and sustainable
+            technology solutions.</p>
+          <form class="needs-validation" novalidate>
+            <label for="subscr-email" class="form-label">Subscribe to receive exclusive insights.</label>
+            <div class="input-group">
+              <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email"
+                required>
+              <i
+                class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+              <div class="invalid-tooltip position-absolute top-100 start-0">Email address format seems invalid.</div>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-6 pt-4 pt-md-1 pt-lg-0">
+          <nav class="row justify-content-lg-end" aria-label="Footer navigation">
+            <!-- Company Links -->
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+              <h6 class="fs-base text-light mb-3">The Company</h6>
+              <ul class="nav flex-column fs-sm">
+                <li class="nav-item">
+                  <a href="home.html" class="nav-link d-inline-block text-light py-1 px-0">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="about-v3.html" class="nav-link d-inline-block text-light py-1 px-0">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="leadership.html" class="nav-link d-inline-block text-light py-1 px-0">Leadership</a>
+                </li>
+                <li class="nav-item">
+                  <a href="clients-and-partners.html" class="nav-link d-inline-block text-light py-1 px-0">Clients &
+                    Partners</a>
+                </li>
+                <li class="nav-item">
+                  <a href="careers.html" class="nav-link d-inline-block text-light py-1 px-0">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link d-inline-block text-light py-1 px-0">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Solutions Links -->
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+              <h6 class="fs-base text-light mb-3">Solutions & Products</h6>
+              <ul class="nav flex-column fs-sm">
+                <li class="nav-item">
+                  <a href="collegeport.html" class="nav-link d-inline-block text-light py-1 px-0">CollegePort™</a>
+                </li>
+                <li class="nav-item">
+                  <a href="schoolport.html" class="nav-link d-inline-block text-light py-1 px-0">SchoolPort™</a>
+                </li>
+                <li class="nav-item">
+                  <a href="progrid-erp.html" class="nav-link d-inline-block text-light py-1 px-0">ProGrid ERP</a>
+                </li>
+                <li class="nav-item">
+                  <a href="bems.html" class="nav-link d-inline-block text-light py-1 px-0">BEMS™</a>
+                </li>
+                <li class="nav-item">
+                  <a href="epms.html" class="nav-link d-inline-block text-light py-1 px-0">EPMS</a>
+                </li>
+                <li class="nav-item">
+                  <a href="solutions.html" class="nav-link d-inline-block text-light py-1 px-0">All Solutions</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Resources & Connect -->
+            <div class="col-6 col-lg-3 mt-4 mt-md-0">
+              <h6 class="fs-base text-light mb-3">Connect With Us</h6>
+              <ul class="nav flex-column fs-sm mb-4">
+                <li class="nav-item">
+                  <a href="mailto:info@bluetag-it.com" class="nav-link d-inline-block text-light py-1 px-0">
+                    <i class="bx bx-envelope fs-lg me-2"></i>info@bluetag-it.com
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="tel:+2348081937426" class="nav-link d-inline-block text-light py-1 px-0">
+                    <i class="bx bx-phone fs-lg me-2"></i>+234 808 193 7426
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link d-inline-block text-light py-1 px-0">
+                    <i class="bx bxl-linkedin fs-lg me-2"></i>LinkedIn
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link d-inline-block text-light py-1 px-0">
+                    <i class="bx bxl-twitter fs-lg me-2"></i>Twitter
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link d-inline-block text-light py-1 px-0">
+                    <i class="bx bxl-facebook fs-lg me-2"></i>Facebook
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link d-inline-block text-light py-1 px-0">
+                    <i class="bx bxl-whatsapp fs-lg me-2"></i>WhatsApp
+                  </a>
+                </li>
+              </ul>
+
+              <h6 class="fs-base text-light mb-3">Legal</h6>
+              <ul class="nav flex-column fs-sm">
+                <li class="nav-item">
+                  <a href="terms-of-use.html" class="nav-link d-inline-block text-light py-1 px-0">Terms of Use</a>
+                </li>
+                <li class="nav-item">
+                  <a href="privacy-policy.html" class="nav-link d-inline-block text-light py-1 px-0">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+        <span class="text-light opacity-50">&copy; 2023 All Rights Reserved. BlueTag Technologies Ltd., duly registered
+          with the Corporate Affairs Commission (CAC) under company number RC-1178140, is your trusted partner in
+          transformative technology solutions.</span>
+        <span class="text-light opacity-50"> | </span>
+        <a href="team-credits.html" class="nav-link d-inline-block p-0 text-light opacity-75">Website Team</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- Back to top button -->
+  <a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+
+
+  <!-- Vendor Scripts -->
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main Theme Script -->
+  <script src="assets/js/theme.min.js"></script>
+</body>
+
+</html>
